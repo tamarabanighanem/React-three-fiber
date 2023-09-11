@@ -51,7 +51,7 @@ export default function Three() {
     return (
         <>
             <PerspectiveCamera position={[0, 1, 5]} />
-            <OrbitControls ref={OrbitControlsRef} minPolarAngle={angleToRadians(60)} maxPolarAngle={angleToRadians(90)} />
+            <OrbitControls ref={OrbitControlsRef} minPolarAngle={angleToRadians(60)} maxPolarAngle={angleToRadians(80)} />
             {/* poll */}
             <mesh position={[-2, 2.5, 0]} castShadow ref={ballRef}>
                 <sphereGeometry args={[1.25, 32, 32]} />
@@ -61,7 +61,7 @@ export default function Three() {
             <Car/>
 
             {/* floor */}
-            <mesh rotation={[-angleToRadians(80), 0, 0]} receiveShadow>
+            <mesh rotation={[-angleToRadians(90), 0, 0]} receiveShadow>
                 <planeGeometry args={[50, 50]} />
                 <primitive object={florMaterial} attach='material' />
 
