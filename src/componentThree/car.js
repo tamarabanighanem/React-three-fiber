@@ -1,8 +1,10 @@
 
 import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
+import { MeshStandardMaterial } from "three";
 export function Car(props) {
   const { nodes, materials } = useGLTF("./model/car/scene.glb");
+  const meshCar=new MeshStandardMaterial({color:'blue'})
   return (
     <group {...props} dispose={null} scale={0.03} position={[5,0,0]}>
       <group rotation={[-Math.PI / 2, 0, 0]}>
